@@ -104,6 +104,7 @@ export default function Home() {
         <div className="navLinks">
           <a href="#projetos">Projetos</a>
           <a href="#sobre">Sobre</a>
+          <a href="/curriculo-gustavo-alencar-matos.pdf" target="_blank" rel="noreferrer">Currículo</a>
           <a href="#contato">Contato</a>
         </div>
       </nav>
@@ -123,6 +124,14 @@ export default function Home() {
             <a className="button primary" href="#projetos">Explorar projetos <ArrowIcon /></a>
             <a className="button ghost" href="https://github.com/gugdev" target="_blank" rel="noreferrer">
               GitHub <ArrowIcon />
+            </a>
+            <a
+              className="button ghost"
+              href="/curriculo-gustavo-alencar-matos.pdf"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Ver currículo <ArrowIcon />
             </a>
           </div>
         </div>
@@ -233,6 +242,14 @@ export default function Home() {
             </a>
             <a className="textLink" href="https://github.com/gugdev" target="_blank" rel="noreferrer">
               Ver GitHub <ArrowIcon />
+            </a>
+            <a
+              className="textLink"
+              href="/curriculo-gustavo-alencar-matos.pdf"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Abrir currículo <ArrowIcon />
             </a>
           </div>
         </div>
