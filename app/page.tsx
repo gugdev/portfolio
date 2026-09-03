@@ -12,7 +12,7 @@ const projects = [
     tech: ["n8n", "LLMs", "REST APIs", "Webhooks"],
     links: [
       { label: "Código da equipe", href: "https://github.com/marcocaparra/PraxUsLanding" },
-      { label: "Ver interface", href: "https://praxusai.vercel.app" },
+      { label: "Ver landing page", href: "https://praxusai.vercel.app" },
     ],
     note: "Interface preservada; workflow de IA atualmente desativado.",
     image: {
@@ -45,7 +45,7 @@ const projects = [
     tech: ["TypeScript", "IA", "REST APIs", "Validação humana"],
     links: [
       { label: "Código da equipe", href: "https://github.com/marcocaparra/Aras" },
-      { label: "Ver interface", href: "https://landingpage-aras.vercel.app" },
+      { label: "Ver landing page", href: "https://landingpage-aras.vercel.app" },
     ],
     image: {
       src: "/projects/aras.png",
@@ -237,8 +237,11 @@ export default function Home() {
           <h2>Tem um problema<br /><em>interessante?</em></h2>
           <p>Estou aberto a oportunidades de estágio em IA, Engenharia de Software, automação e desenvolvimento.</p>
           <div className="contactLinks">
-            <a className="button light" href="https://linkedin.com/in/gustavo-alencar-matos" target="_blank" rel="noreferrer">
-              Falar pelo LinkedIn <ArrowIcon />
+            <a className="button light" href="mailto:galencarmatos@gmail.com">
+              Enviar e-mail <ArrowIcon />
+            </a>
+            <a className="textLink" href="https://linkedin.com/in/gustavo-alencar-matos" target="_blank" rel="noreferrer">
+              LinkedIn <ArrowIcon />
             </a>
             <a className="textLink" href="https://github.com/gugdev" target="_blank" rel="noreferrer">
               Ver GitHub <ArrowIcon />
