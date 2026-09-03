@@ -104,6 +104,9 @@ h2 { font-size: clamp(52px, 7vw, 96px); line-height: .92; }
 .projectDescription { color: #c1c3ba; font-size: 17px; line-height: 1.6; max-width: 520px; margin: 0; }
 .projectDetails > p { color: #aeb0a7; line-height: 1.6; margin: 0 0 20px; }
 .projectDetails strong { display: block; color: var(--paper); font-size: 12px; text-transform: uppercase; letter-spacing: .12em; margin-bottom: 8px; }
+.projectMedia { grid-column: 2 / -1; aspect-ratio: 16 / 10; margin: 16px 0 0; overflow: hidden; border: 1px solid var(--line); background: #15101e; }
+.projectMedia img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .7s cubic-bezier(.2,.8,.2,1); }
+.project:hover .projectMedia img { transform: scale(1.012); }
 .tags { display: flex; gap: 8px; flex-wrap: wrap; list-style: none; margin: 0 0 26px; padding: 0; }
 .tags li { border: 1px solid var(--line); border-radius: 999px; color: #d6d7d0; font-size: 12px; padding: 8px 12px; }
 .projectLinks { display: flex; flex-wrap: wrap; gap: 20px; }
@@ -155,6 +158,7 @@ h2 { font-size: clamp(52px, 7vw, 96px); line-height: .92; }
   .sectionHeading h2 { margin-top: 28px; }
   .project { grid-template-columns: 44px 1fr; gap: 12px; }
   .projectDetails { grid-column: 2; }
+  .projectMedia { grid-column: 1 / -1; margin-top: 12px; }
   .project h3 { font-size: 40px; }
   .aboutGrid { grid-template-columns: 1fr; gap: 44px; }
   .aboutGrid > div:first-child { grid-row: auto; }

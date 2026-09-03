@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { InteractiveEffects } from "./components/interactive-effects";
 
 const projects = [
@@ -14,6 +15,10 @@ const projects = [
       { label: "Ver interface", href: "https://praxusai.vercel.app" },
     ],
     note: "Interface preservada; workflow de IA atualmente desativado.",
+    image: {
+      src: "/projects/praxus.png",
+      alt: "Interface do PraxUs AI mostrando uma conversa de cobrança personalizada e análise em tempo real.",
+    },
   },
   {
     index: "02",
@@ -25,6 +30,10 @@ const projects = [
     tech: ["Front-end", "UI/UX", "Gamificação", "IA"],
     links: [],
     note: "Projeto desenvolvido em equipe; repositório atual privado.",
+    image: {
+      src: "/projects/bingo.jpg",
+      alt: "Três telas do aplicativo BinGo: início, missões de restauração e mapa gamificado da BinGópolis.",
+    },
   },
   {
     index: "03",
@@ -38,6 +47,10 @@ const projects = [
       { label: "Código da equipe", href: "https://github.com/marcocaparra/Aras" },
       { label: "Ver interface", href: "https://landingpage-aras.vercel.app" },
     ],
+    image: {
+      src: "/projects/aras.png",
+      alt: "Interface do ARAS mostrando uma simulação de cadastro e a linha de atendimento social.",
+    },
   },
   {
     index: "04",
@@ -48,6 +61,7 @@ const projects = [
     role: "Desenvolvimento em equipe, com contribuições em back-end, front-end e criação de personagem.",
     tech: ["Java", "XML", "Android", "Gamificação"],
     links: [{ label: "Código da equipe", href: "https://github.com/Enzo-Dutra/EscovAcao" }],
+    image: null,
   },
   {
     index: "05",
@@ -58,6 +72,7 @@ const projects = [
     role: "Desenvolvimento back-end em equipe; participação registrada no README do repositório original.",
     tech: ["PHP", "JavaScript", "MySQL", "HTML/CSS"],
     links: [{ label: "Código da equipe", href: "https://github.com/Enzo-Dutra/PagVan" }],
+    image: null,
   },
 ];
 
@@ -152,6 +167,18 @@ export default function Home() {
                 )}
                 {project.note && <p className="note">{project.note}</p>}
               </div>
+              {project.image && (
+                <figure className="projectMedia">
+                  <Image
+                    src={project.image.src}
+                    alt={project.image.alt}
+                    width={1440}
+                    height={900}
+                    sizes="(max-width: 800px) calc(100vw - 30px), 930px"
+                    quality={90}
+                  />
+                </figure>
+              )}
             </article>
           ))}
         </div>
