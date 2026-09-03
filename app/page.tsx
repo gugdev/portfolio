@@ -1,3 +1,6 @@
+import { ChameleonMark } from "./components/chameleon-mark";
+import { InteractiveEffects } from "./components/interactive-effects";
+
 const projects = [
   {
     index: "01",
@@ -79,9 +82,11 @@ function ArrowIcon() {
 export default function Home() {
   return (
     <main>
+      <InteractiveEffects />
       <nav className="nav shell" aria-label="Navegação principal">
         <a className="brand" href="#top" aria-label="Voltar ao início">
-          GA<span>.</span>
+          <ChameleonMark className="brandMark" />
+          <span className="brandName">Gustavo Alencar</span>
         </a>
         <div className="navLinks">
           <a href="#projetos">Projetos</a>
@@ -91,6 +96,9 @@ export default function Home() {
       </nav>
 
       <section className="hero shell" id="top">
+        <div className="mascotMark" aria-hidden="true">
+          <ChameleonMark decorative />
+        </div>
         <div className="eyebrow"><span /> Disponível para oportunidades</div>
         <h1>
           IA que sai da ideia<br />
@@ -110,7 +118,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="proof">
+      <section className="proof" data-reveal>
         <div className="shell proofGrid">
           <div><strong>2º</strong><span>lugar no Hackathon<br />ENIAC Lab Innovation</span></div>
           <div><strong>05</strong><span>projetos aplicados<br />em equipe</span></div>
@@ -119,14 +127,14 @@ export default function Home() {
       </section>
 
       <section className="section shell" id="projetos">
-        <div className="sectionHeading">
+        <div className="sectionHeading" data-reveal>
           <p className="kicker">Trabalho selecionado</p>
           <h2>Projetos com<br /><em>problemas reais.</em></h2>
         </div>
 
         <div className="projects">
           {projects.map((project) => (
-            <article className="project" key={project.title}>
+            <article className="project" key={project.title} data-reveal>
               <div className="projectIndex">{project.index}</div>
               <div className="projectMain">
                 <p className="projectLabel">{project.label}</p>
@@ -155,7 +163,7 @@ export default function Home() {
       </section>
 
       <section className="about section" id="sobre">
-        <div className="shell aboutGrid">
+        <div className="shell aboutGrid" data-reveal>
           <div>
             <p className="kicker">Sobre mim</p>
             <h2>Curiosidade técnica.<br /><em>Execução prática.</em></h2>
@@ -180,7 +188,7 @@ export default function Home() {
 
       <section className="education section shell">
         <p className="kicker">Formação</p>
-        <div className="timeline">
+        <div className="timeline" data-reveal>
           <div className="educationItem">
             <span>2026 — 2028</span>
             <div><h3>Engenharia de Software</h3><p>ENIAC · Bacharelado em andamento</p></div>
@@ -193,7 +201,7 @@ export default function Home() {
       </section>
 
       <section className="contact section" id="contato">
-        <div className="shell contactInner">
+        <div className="shell contactInner" data-reveal>
           <p className="kicker">Vamos conversar</p>
           <h2>Tem um problema<br /><em>interessante?</em></h2>
           <p>Estou aberto a oportunidades de estágio em IA, Engenharia de Software, automação e desenvolvimento.</p>
