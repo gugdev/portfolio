@@ -51,25 +51,12 @@ main { position: relative; }
   position: relative;
   z-index: 3;
 }
-.brand { display: inline-flex; align-items: center; gap: 8px; }
-.brandMark { width: 42px; height: 42px; object-fit: contain; flex: none; }
+.brand { display: inline-flex; align-items: center; }
 .brandLetters { color: var(--paper); font-size: 22px; font-weight: 900; letter-spacing: -.07em; }
 .brandLetters span { color: var(--acid); }
 .navLinks { display: flex; gap: 30px; color: #c7c8bf; font-size: 14px; }
 .navLinks a:hover { color: var(--acid); }
 .hero { min-height: 720px; padding: 92px 0 80px; display: flex; flex-direction: column; justify-content: space-between; position: relative; isolation: isolate; }
-.hero::before {
-  content: "";
-  position: absolute;
-  z-index: -2;
-  width: 620px;
-  height: 620px;
-  right: -180px;
-  top: -160px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(143, 72, 255, .22), rgba(143, 72, 255, 0) 67%);
-  filter: blur(8px);
-}
 .hero::after {
   content: "";
   position: absolute;
@@ -155,7 +142,6 @@ h2 { font-size: clamp(52px, 7vw, 96px); line-height: .92; }
   .navLinks { gap: 16px; }
   .navLinks a:nth-child(2) { display: none; }
   .hero { min-height: 660px; padding: 70px 0 60px; overflow: hidden; }
-  .hero::before { width: 420px; height: 420px; right: -230px; top: -90px; }
   h1 { font-size: clamp(58px, 20vw, 92px); line-height: .86; }
   .heroBottom { display: block; }
   .heroBottom > p { font-size: 17px; }

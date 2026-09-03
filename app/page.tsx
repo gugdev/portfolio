@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { InteractiveEffects } from "./components/interactive-effects";
 
 const projects = [
@@ -85,14 +84,6 @@ export default function Home() {
       <InteractiveEffects />
       <nav className="nav shell" aria-label="Navegação principal">
         <a className="brand" href="#top" aria-label="Voltar ao início">
-          <Image
-            className="brandMark"
-            src="/camaleao-head-final.png"
-            alt=""
-            width={48}
-            height={48}
-            priority
-          />
           <span className="brandLetters">GA<span>.</span></span>
         </a>
         <div className="navLinks">
