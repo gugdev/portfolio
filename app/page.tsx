@@ -1,4 +1,4 @@
-import { ChameleonMark } from "./components/chameleon-mark";
+import Image from "next/image";
 import { InteractiveEffects } from "./components/interactive-effects";
 
 const projects = [
@@ -85,8 +85,15 @@ export default function Home() {
       <InteractiveEffects />
       <nav className="nav shell" aria-label="Navegação principal">
         <a className="brand" href="#top" aria-label="Voltar ao início">
-          <ChameleonMark className="brandMark" />
-          <span className="brandName">Gustavo Alencar</span>
+          <Image
+            className="brandMark"
+            src="/camaleao-head-final.png"
+            alt=""
+            width={48}
+            height={48}
+            priority
+          />
+          <span className="brandLetters">GA<span>.</span></span>
         </a>
         <div className="navLinks">
           <a href="#projetos">Projetos</a>
@@ -96,9 +103,6 @@ export default function Home() {
       </nav>
 
       <section className="hero shell" id="top">
-        <div className="mascotMark" aria-hidden="true">
-          <ChameleonMark decorative />
-        </div>
         <div className="eyebrow"><span /> Disponível para oportunidades</div>
         <h1>
           IA que sai da ideia<br />

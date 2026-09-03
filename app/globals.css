@@ -51,9 +51,10 @@ main { position: relative; }
   position: relative;
   z-index: 3;
 }
-.brand { display: inline-flex; align-items: center; gap: 11px; color: var(--acid); }
-.brandMark { width: 38px; height: 38px; flex: none; }
-.brandName { color: var(--paper); font-size: 13px; font-weight: 800; letter-spacing: -.02em; }
+.brand { display: inline-flex; align-items: center; gap: 8px; }
+.brandMark { width: 42px; height: 42px; object-fit: contain; flex: none; }
+.brandLetters { color: var(--paper); font-size: 22px; font-weight: 900; letter-spacing: -.07em; }
+.brandLetters span { color: var(--acid); }
 .navLinks { display: flex; gap: 30px; color: #c7c8bf; font-size: 14px; }
 .navLinks a:hover { color: var(--acid); }
 .hero { min-height: 720px; padding: 92px 0 80px; display: flex; flex-direction: column; justify-content: space-between; position: relative; isolation: isolate; }
@@ -79,19 +80,6 @@ main { position: relative; }
   background-size: 74px 74px;
   mask-image: linear-gradient(to bottom, black, transparent 78%);
 }
-.mascotMark {
-  position: absolute;
-  z-index: -1;
-  right: -18px;
-  bottom: 80px;
-  width: 250px;
-  height: 250px;
-  overflow: hidden;
-  color: var(--acid);
-  opacity: .2;
-  transform: rotate(-4deg);
-}
-.mascotMark svg { width: 100%; height: 100%; }
 .eyebrow, .kicker { font-size: 12px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
 .eyebrow { color: #d2d4cb; display: flex; align-items: center; gap: 10px; }
 .eyebrow span { width: 8px; height: 8px; border-radius: 50%; background: var(--acid); box-shadow: 0 0 22px var(--acid); }
@@ -165,11 +153,9 @@ h2 { font-size: clamp(52px, 7vw, 96px); line-height: .92; }
   .shell { width: min(100% - 30px, 1180px); }
   .nav { height: 72px; }
   .navLinks { gap: 16px; }
-  .brandName { display: none; }
   .navLinks a:nth-child(2) { display: none; }
   .hero { min-height: 660px; padding: 70px 0 60px; overflow: hidden; }
   .hero::before { width: 420px; height: 420px; right: -230px; top: -90px; }
-  .mascotMark { right: -70px; bottom: 145px; width: 190px; height: 190px; opacity: .12; }
   h1 { font-size: clamp(58px, 20vw, 92px); line-height: .86; }
   .heroBottom { display: block; }
   .heroBottom > p { font-size: 17px; }
@@ -204,8 +190,6 @@ h2 { font-size: clamp(52px, 7vw, 96px); line-height: .92; }
   @keyframes rise { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }
   .motionReady [data-reveal] { opacity: 0; transform: translateY(34px); transition: opacity .75s cubic-bezier(.2,.8,.2,1), transform .75s cubic-bezier(.2,.8,.2,1); }
   .motionReady [data-reveal].isVisible { opacity: 1; transform: translateY(0); }
-  .mascotMark { animation: mascotFloat 5s ease-in-out infinite; }
-  @keyframes mascotFloat { 0%, 100% { transform: translateY(0) rotate(-4deg); } 50% { transform: translateY(-12px) rotate(-1deg); } }
 }
 
 @media (prefers-reduced-motion: reduce) {
