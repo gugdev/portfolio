@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { InteractiveEffects } from "./components/interactive-effects";
+import { LanguageSelector } from "./components/language-selector";
 
 const projects = [
   {
@@ -131,7 +132,7 @@ export default function Home() {
           <a href="#sobre">Sobre</a>
           <a href="/curriculo-gustavo-alencar-matos.pdf" target="_blank" rel="noreferrer">Currículo</a>
           <a href="#contato">Contato</a>
-          <a className="languageSwitch" href="/en" lang="en" aria-label="View portfolio in English">EN</a>
+          <LanguageSelector language="pt-BR" />
         </div>
       </nav>
 

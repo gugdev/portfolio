@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { InteractiveEffects } from "../components/interactive-effects";
+import { LanguageSelector } from "../components/language-selector";
 
 export const metadata: Metadata = {
   title: "Gustavo Alencar | AI and Software Engineering",
@@ -152,7 +153,7 @@ export default function EnglishHome() {
           <a href="#about">About</a>
           <a href="/resume-gustavo-alencar-matos.pdf" target="_blank" rel="noreferrer">Resume</a>
           <a href="#contact">Contact</a>
-          <a className="languageSwitch" href="/" lang="pt-BR" aria-label="Ver portfólio em português">PT</a>
+          <LanguageSelector language="en" />
         </div>
       </nav>
 
