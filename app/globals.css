@@ -121,8 +121,8 @@ h2 { font-size: clamp(52px, 7vw, 96px); line-height: .92; }
 .projectDisclosure summary:hover { background: rgba(169,112,255,.07); }
 .projectDisclosure summary::-webkit-details-marker { display: none; }
 .projectDisclosure .summaryLabel { color: var(--paper); }
-.projectDisclosure .summaryAction { display: grid; place-items: center; width: 26px; height: 26px; border: 1px solid rgba(169,112,255,.34); color: var(--acid); font-size: 20px; font-weight: 400; line-height: 1; transition: transform .2s ease, background .2s ease; }
-.projectDisclosure[open] .summaryAction { transform: rotate(45deg); background: rgba(169,112,255,.11); }
+.projectDisclosure .summaryAction { color: var(--acid); font-size: 18px; font-weight: 400; line-height: 1; transition: transform .2s ease; }
+.projectDisclosure[open] .summaryAction { transform: rotate(180deg); }
 .disclosureContent { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); }
 .disclosureContent p { min-width: 0; margin: 0; padding: 22px 20px 24px; border-right: 1px solid var(--line); color: #aeb0a7; font-size: 13px; line-height: 1.58; }
 .disclosureContent p:last-child { border-right: 0; }

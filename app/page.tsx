@@ -14,7 +14,7 @@ const projects = [
       { label: "Código da equipe", href: "https://github.com/marcocaparra/PraxUsLanding" },
       { label: "Ver landing page", href: "https://praxusai.vercel.app" },
     ],
-    note: "Interface preservada; workflow de IA atualmente desativado.",
+    note: "A interface continua disponível. O workflow de IA está desativado no momento.",
     details: {
       challenge: "Criar uma abordagem de cobrança mais contextual e menos genérica, adaptando a comunicação às interações do usuário.",
       solution: "Uma experiência conversacional conectada a workflows no n8n, APIs, webhooks e diferentes modelos de linguagem.",
@@ -34,7 +34,7 @@ const projects = [
     role: "Responsável pelo front-end do aplicativo, com atuação em UI/UX, interface do totem e frente de IA.",
     tech: ["Front-end", "UI/UX", "Gamificação", "IA"],
     links: [],
-    note: "Projeto desenvolvido em equipe; repositório atual privado.",
+    note: "Projeto desenvolvido em equipe. O repositório atual é privado.",
     details: {
       challenge: "Tornar o descarte de resíduos eletroeletrônicos mais compreensível e envolvente para estudantes.",
       solution: "Um ecossistema gamificado com missões, registro de impacto, aplicativo mobile e interface para um totem de coleta.",
@@ -78,7 +78,7 @@ const projects = [
     details: {
       challenge: "Ajudar crianças a desenvolver hábitos de higiene bucal de uma maneira simples e lúdica.",
       solution: "Aplicativo Android com recursos educativos, gamificação e identidade visual voltada ao público infantil.",
-      status: "Projeto acadêmico desenvolvido em equipe; o repositório público está mantido na conta de um integrante.",
+      status: "Projeto acadêmico desenvolvido em equipe. O repositório público está na conta de um dos integrantes.",
     },
     links: [{ label: "Código da equipe", href: "https://github.com/Enzo-Dutra/EscovAcao" }],
     image: null,
@@ -89,12 +89,12 @@ const projects = [
     label: "Back-end · Gestão",
     description:
       "Sistema web para motoristas de vans escolares gerenciarem alunos, rotas, chamadas e pagamentos.",
-    role: "Desenvolvimento back-end em equipe; participação registrada no README do repositório original.",
+    role: "Desenvolvimento back-end em equipe. Minha participação está registrada no README do repositório original.",
     tech: ["PHP", "JavaScript", "MySQL", "HTML/CSS"],
     details: {
       challenge: "Centralizar tarefas recorrentes de motoristas de vans escolares, como alunos, rotas, chamadas e pagamentos.",
       solution: "Sistema web com interface de gestão e persistência de dados em MySQL.",
-      status: "Projeto acadêmico desenvolvido em equipe; minha participação está registrada no README original.",
+      status: "Projeto acadêmico desenvolvido em equipe. Minha participação está registrada no README original.",
     },
     links: [{ label: "Código da equipe", href: "https://github.com/Enzo-Dutra/PagVan" }],
     image: null,
@@ -214,7 +214,7 @@ export default function Home() {
               <details className="projectDisclosure">
                 <summary>
                   <span className="summaryLabel">Ver detalhes do projeto</span>
-                  <span className="summaryAction" aria-hidden="true">+</span>
+                  <span className="summaryAction" aria-hidden="true">↓</span>
                 </summary>
                 <div className="disclosureContent">
                   <p><strong>Desafio</strong>{project.details.challenge}</p>
@@ -275,8 +275,8 @@ export default function Home() {
             </p>
             <p className="aboutMission">
               Meu objetivo é usar tecnologia para reduzir tarefas repetitivas e o trabalho operacional
-              que consome tempo desnecessariamente — para que as pessoas possam dedicar mais energia ao
-              que realmente importa e ao que gostam de fazer.
+              que toma tempo sem necessidade. Quero ajudar as pessoas a terem mais tempo e energia para
+              o que realmente importa e para o que gostam de fazer.
             </p>
           </div>
           <div className="skillCloud">
@@ -289,7 +289,7 @@ export default function Home() {
         <p className="kicker">Formação</p>
         <div className="timeline" data-reveal>
           <div className="educationItem">
-            <span>2026 — 2028</span>
+            <span>2026 a 2028</span>
             <div><h3>Engenharia de Software</h3><p>ENIAC · Bacharelado em andamento</p></div>
           </div>
           <div className="educationItem">
