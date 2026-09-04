@@ -6,6 +6,13 @@ export const metadata: Metadata = {
   description:
     "Portfólio de Gustavo Alencar Matos: inteligência artificial aplicada, automação, software e experiências digitais.",
   metadataBase: new URL("https://gustavo-alencar.vercel.app"),
+  alternates: {
+    canonical: "/",
+    languages: {
+      "pt-BR": "/",
+      en: "/en",
+    },
+  },
   openGraph: {
     title: "Gustavo Alencar | IA e Engenharia de Software",
     description:

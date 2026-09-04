@@ -56,6 +56,8 @@ main { position: relative; }
 .brandLetters span { color: var(--acid); }
 .navLinks { display: flex; gap: 30px; color: #c7c8bf; font-size: 14px; }
 .navLinks a:hover { color: var(--acid); }
+.navLinks .languageSwitch { color: var(--paper); font-weight: 800; }
+.navLinks .languageSwitch::before { content: ""; border-left: 1px solid var(--line); margin-right: 18px; }
 .hero { min-height: 720px; padding: 92px 0 80px; display: flex; flex-direction: column; justify-content: space-between; position: relative; isolation: isolate; }
 .hero::after {
   content: "";
@@ -166,6 +168,8 @@ h2 { font-size: clamp(52px, 7vw, 96px); line-height: .92; }
   .nav { height: 72px; }
   .navLinks { gap: 16px; }
   .navLinks a:nth-child(2) { display: none; }
+  .navLinks a:nth-child(3) { display: none; }
+  .navLinks .languageSwitch::before { margin-right: 8px; }
   .hero { min-height: 660px; padding: 70px 0 60px; overflow: hidden; }
   h1 { font-size: clamp(58px, 20vw, 92px); line-height: .86; }
   .heroBottom { display: block; }

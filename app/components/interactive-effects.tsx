@@ -2,9 +2,11 @@
 
 import { useEffect } from "react";
 
-export function InteractiveEffects() {
+export function InteractiveEffects({ language = "pt-BR" }: { language?: string }) {
   useEffect(() => {
     const root = document.documentElement;
+    const previousLanguage = root.lang;
+    root.lang = language;
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const reveals = Array.from(document.querySelectorAll<HTMLElement>("[data-reveal]"));
 
@@ -73,8 +75,9 @@ export function InteractiveEffects() {
       window.removeEventListener("scroll", updateScroll);
       cardHandlers.forEach((handler, card) => card.removeEventListener("pointermove", handler));
       root.classList.remove("motionReady");
+      root.lang = previousLanguage;
     };
-  }, []);
+  }, [language]);
 
   return (
     <>
