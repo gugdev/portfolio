@@ -172,7 +172,17 @@ export default function Home() {
 
       <section className="section shell" id="projetos">
         <div className="sectionHeading" data-reveal>
-          <p className="kicker">Trabalho selecionado</p>
+          <div className="sectionIntro">
+            <p className="kicker">Trabalho selecionado</p>
+            <p className="sectionNote">
+              Cinco projetos que mostram como penso, colaboro e transformo tecnologia em algo útil.
+            </p>
+            <div className="sectionSignals" aria-label="Áreas dos projetos">
+              <span>IA aplicada</span>
+              <span>Automação</span>
+              <span>Software</span>
+            </div>
+          </div>
           <h2>Projetos com<br /><em>problemas reais.</em></h2>
         </div>
 
@@ -200,15 +210,18 @@ export default function Home() {
                   </div>
                 )}
                 {project.note && <p className="note">{project.note}</p>}
-                <details className="projectDisclosure">
-                  <summary>Ver detalhes <span aria-hidden="true">+</span></summary>
-                  <div className="disclosureContent">
-                    <p><strong>Desafio</strong>{project.details.challenge}</p>
-                    <p><strong>Solução</strong>{project.details.solution}</p>
-                    <p><strong>Situação atual</strong>{project.details.status}</p>
-                  </div>
-                </details>
               </div>
+              <details className="projectDisclosure">
+                <summary>
+                  <span className="summaryLabel">Ver detalhes do projeto</span>
+                  <span className="summaryAction" aria-hidden="true">+</span>
+                </summary>
+                <div className="disclosureContent">
+                  <p><strong>Desafio</strong>{project.details.challenge}</p>
+                  <p><strong>Solução</strong>{project.details.solution}</p>
+                  <p><strong>Situação atual</strong>{project.details.status}</p>
+                </div>
+              </details>
               {project.image && (
                 <figure className="projectMedia">
                   <Image
@@ -228,19 +241,25 @@ export default function Home() {
 
       <section className="about section" id="sobre">
         <div className="shell aboutGrid" data-reveal>
-          <div className="aboutIntro">
+          <div className="aboutHeading">
             <p className="kicker">Sobre mim</p>
             <h2>Curiosidade técnica.<br /><em>Execução prática.</em></h2>
+          </div>
+          <div className="aboutVisual">
             <figure className="aboutPortrait">
               <Image
                 src="/gustavo-alencar.jpg"
                 alt="Retrato de Gustavo Alencar Matos"
                 width={800}
                 height={800}
-                sizes="(max-width: 800px) 180px, 240px"
+                sizes="(max-width: 800px) 320px, 350px"
                 quality={90}
               />
             </figure>
+            <div className="aboutPortraitMeta" aria-label="Informações de Gustavo">
+              <span><i aria-hidden="true" /> Guarulhos, SP</span>
+              <span><i aria-hidden="true" /> Disponível para estágio</span>
+            </div>
           </div>
           <div className="aboutCopy">
             <p>
