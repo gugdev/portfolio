@@ -197,7 +197,7 @@ export default function EnglishHome() {
               <span>Applied AI</span><span>Automation</span><span>Software</span>
             </div>
           </div>
-          <h2>Projects built around<br /><em>real problems.</em></h2>
+          <h2>Projects for<br /><em>real problems.</em></h2>
         </div>
 
         <div className="projects">
