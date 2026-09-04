@@ -77,4 +77,4 @@ public/
 
 ## Princípio
 
-Meu objetivo é usar tecnologia para reduzir tarefas repetitivas e o trabalho operacional que consome tempo desnecessariamente, permitindo que as pessoas dediquem mais energia ao que realmente importa e ao que gostam de fazer.
+Meu objetivo é usar tecnologia para facilitar a vida das pessoas. Busco criar soluções que simplifiquem rotinas, reduzam tarefas repetitivas e deixem processos mais claros, abrindo espaço para que cada pessoa dedique mais tempo e energia ao que realmente importa e ao que gosta de fazer.

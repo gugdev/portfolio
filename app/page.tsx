@@ -274,9 +274,10 @@ export default function Home() {
               contribuir em produtos de verdade.
             </p>
             <p className="aboutMission">
-              Meu objetivo é usar tecnologia para reduzir tarefas repetitivas e o trabalho operacional
-              que toma tempo sem necessidade. Quero ajudar as pessoas a terem mais tempo e energia para
-              o que realmente importa e para o que gostam de fazer.
+              Meu objetivo é usar tecnologia para facilitar a vida das pessoas. Gosto de criar soluções
+              que simplificam rotinas, reduzem tarefas repetitivas e deixam processos mais claros. Quando
+              isso acontece, sobra mais tempo e energia para o que realmente importa e para o que cada
+              pessoa gosta de fazer.
             </p>
           </div>
           <div className="skillCloud">
