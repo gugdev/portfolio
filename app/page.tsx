@@ -15,6 +15,11 @@ const projects = [
       { label: "Ver landing page", href: "https://praxusai.vercel.app" },
     ],
     note: "Interface preservada; workflow de IA atualmente desativado.",
+    details: {
+      challenge: "Criar uma abordagem de cobrança mais contextual e menos genérica, adaptando a comunicação às interações do usuário.",
+      solution: "Uma experiência conversacional conectada a workflows no n8n, APIs, webhooks e diferentes modelos de linguagem.",
+      status: "Projeto apresentado no ENIAC Lab Innovation 2026, onde conquistou o 2º lugar. A interface segue disponível, mas o fluxo de IA está desativado.",
+    },
     image: {
       src: "/projects/praxus.png",
       alt: "Interface do PraxUs AI mostrando uma conversa de cobrança personalizada e análise em tempo real.",
@@ -23,13 +28,18 @@ const projects = [
   {
     index: "02",
     title: "BinGo",
-    label: "Produto ativo · Front-end",
+    label: "Em desenvolvimento · Front-end",
     description:
       "Ecossistema gamificado que incentiva e registra o descarte adequado de resíduos eletroeletrônicos em escolas.",
     role: "Responsável pelo front-end do aplicativo, com atuação em UI/UX, interface do totem e frente de IA.",
     tech: ["Front-end", "UI/UX", "Gamificação", "IA"],
     links: [],
     note: "Projeto desenvolvido em equipe; repositório atual privado.",
+    details: {
+      challenge: "Tornar o descarte de resíduos eletroeletrônicos mais compreensível e envolvente para estudantes.",
+      solution: "Um ecossistema gamificado com missões, registro de impacto, aplicativo mobile e interface para um totem de coleta.",
+      status: "Produto em desenvolvimento. O repositório pertence à equipe e permanece privado enquanto a solução evolui.",
+    },
     image: {
       src: "/projects/bingo.jpg",
       alt: "Três telas do aplicativo BinGo: início, missões de restauração e mapa gamificado da BinGópolis.",
@@ -43,6 +53,11 @@ const projects = [
       "Agenda e Registro da Assistência Social: padronização assistida por IA para registros iniciais em CRAS e CREAS.",
     role: "Lógica de back-end, estruturação de dados, integração com IA e contribuições na interface.",
     tech: ["TypeScript", "IA", "REST APIs", "Validação humana"],
+    details: {
+      challenge: "Apoiar o registro inicial de atendimentos sociais com mais estrutura, sem retirar a responsabilidade dos profissionais.",
+      solution: "Uma experiência assistida por IA que organiza informações e mantém a validação humana antes do uso dos registros.",
+      status: "Protótipo desenvolvido em equipe durante o Hackathon Experimenta Guarulhos 2026.",
+    },
     links: [
       { label: "Código da equipe", href: "https://github.com/marcocaparra/Aras" },
       { label: "Ver landing page", href: "https://landingpage-aras.vercel.app" },
@@ -60,6 +75,11 @@ const projects = [
       "Aplicativo lúdico para ajudar crianças de 4 a 8 anos a desenvolverem uma rotina de higiene bucal.",
     role: "Desenvolvimento em equipe, com contribuições em back-end, front-end e criação de personagem.",
     tech: ["Java", "XML", "Android", "Gamificação"],
+    details: {
+      challenge: "Ajudar crianças a desenvolver hábitos de higiene bucal de uma maneira simples e lúdica.",
+      solution: "Aplicativo Android com recursos educativos, gamificação e identidade visual voltada ao público infantil.",
+      status: "Projeto acadêmico desenvolvido em equipe; o repositório público está mantido na conta de um integrante.",
+    },
     links: [{ label: "Código da equipe", href: "https://github.com/Enzo-Dutra/EscovAcao" }],
     image: null,
   },
@@ -71,6 +91,11 @@ const projects = [
       "Sistema web para motoristas de vans escolares gerenciarem alunos, rotas, chamadas e pagamentos.",
     role: "Desenvolvimento back-end em equipe; participação registrada no README do repositório original.",
     tech: ["PHP", "JavaScript", "MySQL", "HTML/CSS"],
+    details: {
+      challenge: "Centralizar tarefas recorrentes de motoristas de vans escolares, como alunos, rotas, chamadas e pagamentos.",
+      solution: "Sistema web com interface de gestão e persistência de dados em MySQL.",
+      status: "Projeto acadêmico desenvolvido em equipe; minha participação está registrada no README original.",
+    },
     links: [{ label: "Código da equipe", href: "https://github.com/Enzo-Dutra/PagVan" }],
     image: null,
   },
@@ -175,6 +200,14 @@ export default function Home() {
                   </div>
                 )}
                 {project.note && <p className="note">{project.note}</p>}
+                <details className="projectDisclosure">
+                  <summary>Ver detalhes <span aria-hidden="true">+</span></summary>
+                  <div className="disclosureContent">
+                    <p><strong>Desafio</strong>{project.details.challenge}</p>
+                    <p><strong>Solução</strong>{project.details.solution}</p>
+                    <p><strong>Situação atual</strong>{project.details.status}</p>
+                  </div>
+                </details>
               </div>
               {project.image && (
                 <figure className="projectMedia">
@@ -195,20 +228,36 @@ export default function Home() {
 
       <section className="about section" id="sobre">
         <div className="shell aboutGrid" data-reveal>
-          <div>
+          <div className="aboutIntro">
             <p className="kicker">Sobre mim</p>
             <h2>Curiosidade técnica.<br /><em>Execução prática.</em></h2>
+            <figure className="aboutPortrait">
+              <Image
+                src="/gustavo-alencar.jpg"
+                alt="Retrato de Gustavo Alencar Matos"
+                width={800}
+                height={800}
+                sizes="(max-width: 800px) 180px, 240px"
+                quality={90}
+              />
+            </figure>
           </div>
           <div className="aboutCopy">
             <p>
-              Minha principal área de interesse é a aplicação de inteligência artificial em software.
-              Gosto de entender o problema, desenhar o fluxo e conectar modelos, dados e interfaces em
-              uma experiência que realmente possa ser usada.
+              Sou estudante de Engenharia de Software, com interesse em IA aplicada, automação e
+              desenvolvimento de produtos digitais. Gosto de entender o problema, desenhar o fluxo e
+              conectar modelos, dados e interfaces em experiências que realmente possam ser usadas.
             </p>
             <p>
-              Atualmente curso Engenharia de Software no ENIAC e concluo o Ensino Médio integrado ao
-              Técnico em Informática. Procuro minha primeira oportunidade para aprender com um time forte
-              e contribuir em produtos de verdade.
+              Tenho facilidade para aprender novas tecnologias e me adaptar a diferentes contextos. Já
+              contribuí em projetos de front-end, back-end, mobile e integração de IA, sempre de forma
+              colaborativa. Procuro minha primeira oportunidade para aprender com um time forte e
+              contribuir em produtos de verdade.
+            </p>
+            <p className="aboutMission">
+              Meu objetivo é usar tecnologia para reduzir tarefas repetitivas e o trabalho operacional
+              que consome tempo desnecessariamente — para que as pessoas possam dedicar mais energia ao
+              que realmente importa e ao que gostam de fazer.
             </p>
           </div>
           <div className="skillCloud">
