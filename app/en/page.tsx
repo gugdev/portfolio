@@ -35,7 +35,7 @@ const projects = [
     tech: ["n8n", "LLMs", "REST APIs", "Webhooks"],
     links: [
       { label: "Team repository", href: "https://github.com/marcocaparra/PraxUsLanding" },
-      { label: "View landing page", href: "https://praxusai.vercel.app" },
+      { label: "View project", href: "https://praxusai.vercel.app" },
     ],
     note: "The interface remains available. The AI workflow is currently disabled.",
     details: {
@@ -58,7 +58,7 @@ const projects = [
     role: "Technical collaboration on the software, image-analysis flow, camera integration, and tablet prototype.",
     tech: ["JavaScript", "Computer vision", "Webcam", "Prototyping"],
     links: [
-      { label: "Open application", href: "https://bioscan-i5wevi.v2.appdeploy.ai/" },
+      { label: "View project", href: "https://bioscan-i5wevi.v2.appdeploy.ai/" },
     ],
     note: "I contributed as a technical collaborator on the software and prototype. The solution is experimental and educational; it does not perform microbiological analysis.",
     details: {

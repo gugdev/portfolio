@@ -14,7 +14,7 @@ const projects = [
     tech: ["n8n", "LLMs", "REST APIs", "Webhooks"],
     links: [
       { label: "Código da equipe", href: "https://github.com/marcocaparra/PraxUsLanding" },
-      { label: "Ver landing page", href: "https://praxusai.vercel.app" },
+      { label: "Ver projeto", href: "https://praxusai.vercel.app" },
     ],
     note: "A interface continua disponível. O workflow de IA está desativado no momento.",
     details: {
@@ -37,7 +37,7 @@ const projects = [
     role: "Colaboração técnica no desenvolvimento do software, fluxo de análise de imagens, integração com câmera e protótipo para tablet.",
     tech: ["JavaScript", "Visão computacional", "Webcam", "Prototipagem"],
     links: [
-      { label: "Abrir aplicativo", href: "https://bioscan-i5wevi.v2.appdeploy.ai/" },
+      { label: "Ver projeto", href: "https://bioscan-i5wevi.v2.appdeploy.ai/" },
     ],
     note: "Participei como colaborador técnico no software e no protótipo. A solução é experimental e educativa; não realiza análise microbiológica.",
     details: {
