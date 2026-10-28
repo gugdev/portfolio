@@ -87,9 +87,9 @@ const projects = [
     },
     links: [
       { label: "Código da equipe", href: "https://github.com/marcocaparra/Aras" },
-      { label: "Ver landing page", href: "https://landingpage-aras.vercel.app" },
+      { label: "Ver projeto", href: "https://landingpage-aras.vercel.app" },
     ],
-    previewUrl: null,
+    previewUrl: "https://landingpage-aras.vercel.app",
     image: {
       src: "/projects/aras.png",
       alt: "Interface do ARAS mostrando uma simulação de cadastro e a linha de atendimento social.",
