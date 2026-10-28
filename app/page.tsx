@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { InteractiveEffects } from "./components/interactive-effects";
 import { LanguageSelector } from "./components/language-selector";
+import { ProjectPreview } from "./components/project-preview";
 
 const projects = [
   {
@@ -21,6 +22,7 @@ const projects = [
       solution: "Uma experiência conversacional conectada a workflows no n8n, APIs, webhooks e diferentes modelos de linguagem.",
       status: "Projeto apresentado no ENIAC Lab Innovation 2026, onde conquistou o 2º lugar. A interface segue disponível, mas o fluxo de IA está desativado.",
     },
+    previewUrl: "https://praxusai.vercel.app",
     image: {
       src: "/projects/praxus.png",
       alt: "Interface do PraxUs AI mostrando uma conversa de cobrança personalizada e análise em tempo real.",
@@ -28,6 +30,29 @@ const projects = [
   },
   {
     index: "02",
+    title: "BioScan",
+    label: "FECEG 2026 · Melhor Projeto Eixo Tema",
+    description:
+      "Protótipo educativo que compara imagens das mãos antes e depois da lavagem e estima a área visível com marcador fluorescente.",
+    role: "Colaboração técnica no desenvolvimento do software, fluxo de análise de imagens, integração com câmera e protótipo para tablet.",
+    tech: ["JavaScript", "Visão computacional", "Webcam", "Prototipagem"],
+    links: [
+      { label: "Abrir aplicativo", href: "https://bioscan-i5wevi.v2.appdeploy.ai/" },
+    ],
+    note: "Participei como colaborador técnico no software e no protótipo. A solução é experimental e educativa; não realiza análise microbiológica.",
+    details: {
+      challenge: "Transformar a inspeção da lavagem das mãos em uma experiência visual, rápida e compreensível para demonstrações educativas.",
+      solution: "Aplicação local que compara capturas antes e depois, destaca o marcador fluorescente e calcula sua proporção na área visível das mãos.",
+      status: "Reconhecido como Melhor Projeto Eixo Tema na FECEG 2026. O protótipo possui versão web e uma experiência preparada para uso em tablet.",
+    },
+    previewUrl: "https://bioscan-i5wevi.v2.appdeploy.ai/",
+    image: {
+      src: "/projects/bioscan.jpg",
+      alt: "Interface do BioScan comparando as mãos antes e depois da lavagem e exibindo a porcentagem de resíduos fluorescentes.",
+    },
+  },
+  {
+    index: "03",
     title: "BinGo",
     label: "Em desenvolvimento · Front-end",
     description:
@@ -41,13 +66,14 @@ const projects = [
       solution: "Um ecossistema gamificado com missões, registro de impacto, aplicativo mobile e interface para um totem de coleta.",
       status: "Produto em desenvolvimento. O repositório pertence à equipe e permanece privado enquanto a solução evolui.",
     },
+    previewUrl: null,
     image: {
       src: "/projects/bingo.jpg",
       alt: "Três telas do aplicativo BinGo: início, missões de restauração e mapa gamificado da BinGópolis.",
     },
   },
   {
-    index: "03",
+    index: "04",
     title: "ARAS",
     label: "Back-end · Human-in-the-loop",
     description:
@@ -63,13 +89,14 @@ const projects = [
       { label: "Código da equipe", href: "https://github.com/marcocaparra/Aras" },
       { label: "Ver landing page", href: "https://landingpage-aras.vercel.app" },
     ],
+    previewUrl: null,
     image: {
       src: "/projects/aras.png",
       alt: "Interface do ARAS mostrando uma simulação de cadastro e a linha de atendimento social.",
     },
   },
   {
-    index: "04",
+    index: "05",
     title: "EscovAção",
     label: "Android · Educação",
     description:
@@ -82,10 +109,11 @@ const projects = [
       status: "Projeto acadêmico desenvolvido em equipe. O repositório público está na conta de um dos integrantes.",
     },
     links: [{ label: "Código da equipe", href: "https://github.com/Enzo-Dutra/EscovAcao" }],
+    previewUrl: null,
     image: null,
   },
   {
-    index: "05",
+    index: "06",
     title: "PagVan",
     label: "Back-end · Gestão",
     description:
@@ -98,6 +126,7 @@ const projects = [
       status: "Projeto acadêmico desenvolvido em equipe. Minha participação está registrada no README original.",
     },
     links: [{ label: "Código da equipe", href: "https://github.com/Enzo-Dutra/PagVan" }],
+    previewUrl: null,
     image: null,
   },
 ];
@@ -166,8 +195,8 @@ export default function Home() {
 
       <section className="proof" data-reveal>
         <div className="shell proofGrid">
-          <div><strong>2º</strong><span>lugar no Hackathon<br />ENIAC Lab Innovation</span></div>
-          <div><strong>05</strong><span>projetos aplicados<br />em equipe</span></div>
+          <div><strong>02</strong><span>projetos premiados<br />em 2026</span></div>
+          <div><strong>06</strong><span>projetos aplicados<br />em equipe</span></div>
           <div><strong>C1</strong><span>inglês avançado<br />para tecnologia</span></div>
         </div>
       </section>
@@ -177,7 +206,7 @@ export default function Home() {
           <div className="sectionIntro">
             <p className="kicker">Trabalho selecionado</p>
             <p className="sectionNote">
-              Cinco projetos que mostram como penso, colaboro e transformo tecnologia em algo útil.
+              Seis projetos que mostram como penso, colaboro e transformo tecnologia em algo útil.
             </p>
             <div className="sectionSignals" aria-label="Áreas dos projetos">
               <span>IA aplicada</span>
@@ -224,18 +253,12 @@ export default function Home() {
                   <p><strong>Situação atual</strong>{project.details.status}</p>
                 </div>
               </details>
-              {project.image && (
-                <figure className="projectMedia">
-                  <Image
-                    src={project.image.src}
-                    alt={project.image.alt}
-                    width={1440}
-                    height={900}
-                    sizes="(max-width: 800px) calc(100vw - 30px), 930px"
-                    quality={90}
-                  />
-                </figure>
-              )}
+              <ProjectPreview
+                title={project.title}
+                image={project.image}
+                previewUrl={project.previewUrl}
+                language="pt-BR"
+              />
             </article>
           ))}
         </div>
